@@ -1,0 +1,30 @@
+.homeCont {
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  height: 100vh;
+  background-color: #fafafa;
+  background-size: cover;
+}
+.postCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 20px;
+}
+.pclistCont {
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.fiAlert {
+  height: 38px;
+  width: 44px;
+  color: #231f20;
+  margin-left: 499px;
+  margin-top: 345px;
+}

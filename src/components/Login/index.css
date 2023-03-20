@@ -1,0 +1,75 @@
+.loginCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 100vh;
+  background-size: cover;
+}
+.loginImg {
+  height: 373px;
+  width: 582px;
+}
+.formCont {
+  display: flex;
+  flex-direction: column;
+  height: 456px;
+  width: 458px;
+  background-color: #fefeff;
+  border-radius: 8px;
+  margin-left: 146px;
+}
+.formImg {
+  height: 30px;
+  width: 82px;
+  margin-top: 72px;
+  margin-left: 187px;
+  margin-right: 187px;
+}
+.formHeading {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 24px;
+  color: #262626;
+  text-align: center;
+}
+.formLabel {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  color: #262626;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 48px;
+  margin-right: 343px;
+  margin-top: 10px;
+}
+.inputEle {
+  height: 40px;
+  width: 360px;
+  margin-left: 48px;
+  margin-right: 343px;
+  background-color: #eeeeee;
+  border: 0px;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+.formBtn {
+  height: 40px;
+  width: 360px;
+  background-color: #4094ef;
+  border: 0px;
+  border-radius: 8px;
+  color: white;
+  margin-left: 48px;
+  margin-top: 20px;
+}
+.errorPara {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  color: #ef4444;
+  margin-left: 48px;
+  margin-right: 143px;
+}

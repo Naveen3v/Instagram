@@ -1,0 +1,122 @@
+.mpcCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  margin-top: 1px;
+}
+.mpcProfileCont {
+  display: flex;
+  flex-direction: row;
+  margin-left: 300px;
+  margin-top: 20px;
+  margin-right: 900px;
+}
+.mpcProfilePic {
+  height: 180px;
+  width: 180px;
+  border-radius: 100%;
+  margin-left: 450px;
+}
+.mpcProfileTextCont {
+  display: flex;
+  flex-direction: column;
+  margin-left: 64px;
+}
+.mpcProfilePara {
+  height: 25px;
+  width: 413px;
+  font-family: 'Roboto';
+  font-size: 25px;
+  font-weight: 300px;
+  margin-top: 5px;
+  text-align: left;
+  color: #262626;
+}
+.mpcpff {
+  display: flex;
+  flex-direction: row;
+}
+.mpcpffPara {
+  height: 16px;
+  width: 110px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400px;
+  margin-top: 6px;
+  color: #262626;
+  margin-left: 1px;
+}
+.mpcIdPara {
+  height: 20px;
+  width: 110px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400px;
+  margin-top: 8px;
+  color: #262626;
+}
+
+.mpcBioPara {
+  height: 35px;
+  width: 675px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400px;
+  margin-top: 3px;
+  color: #262626;
+}
+.mpcStorCont {
+  display: flex;
+  flex-direction: row;
+  margin-left: 750px;
+  margin-top: 30px;
+}
+.mpcStorImg {
+  height: 78px;
+  width: 78px;
+  border-radius: 100%;
+  margin-left: 36px;
+}
+.mpcLine {
+  margin-left: 760px;
+  background-color: #c6c6c8;
+  width: 1040px;
+  margin-top: 32px;
+}
+.mpcgridCont {
+  display: flex;
+  flex-direction: row;
+  margin-left: 770px;
+}
+.mpcgrid {
+  height: 17px;
+  width: 17px;
+  margin-top: 40px;
+}
+.mpcPostsPara {
+  height: 35px;
+  width: 62px;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500px;
+  margin-top: 32px;
+  margin-left: 12px;
+  color: #262626;
+}
+.mpcListCont {
+  display: flex;
+  flex-direction: row;
+  margin-left: 700px;
+  margin-top: 15px;
+  overflow: auto;
+}
+.mpcListImg {
+  height: 330px;
+  width: 330px;
+
+  margin-left: 25px;
+}
+.mpcList {
+  list-style-type: none;
+}

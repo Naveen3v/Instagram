@@ -1,0 +1,126 @@
+.pcList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+.pcprofilepicCont {
+  height: 60px;
+  width: 1040px;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border: 2px solid #dbdbdb;
+}
+.pcprofilepicImg {
+  height: 28px;
+  width: 28px;
+  margin-top: 16px;
+  margin-left: 26px;
+  border-radius: 100%;
+}
+.pcUsername {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  color: #262626;
+  margin-top: 21px;
+  margin-left: 16px;
+  height: 18px;
+  width: 104px;
+}
+
+.pcuserImage {
+  height: 614px;
+  width: 1040px;
+}
+.pcbottomCont {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 1040px;
+  background-color: #ffffff;
+  border: 2px solid #dbdbdb;
+}
+.pcIconCont {
+  display: flex;
+  flex-direction: row;
+  width: 1040px;
+  margin-left: 24px;
+  margin-top: 12px;
+}
+.pcbsHeart {
+  height: 20px;
+  width: 24px;
+  margin-top: 2px;
+  color: #f05161;
+}
+.pcLink {
+  text-decoration: none;
+}
+.pcHeartBtn {
+  color: #f05161;
+  border: 0px;
+  background-color: transparent;
+}
+.pcrcomment {
+  height: 19px;
+  width: 24px;
+  margin-top: 2px;
+  margin-left: 17px;
+}
+
+.pcrshare {
+  height: 24px;
+  width: 24px;
+  margin-top: 2px;
+  margin-left: 17px;
+}
+.pclikePara {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  color: #262626;
+  margin-top: 10px;
+  margin-left: 24px;
+  height: 18px;
+  width: 68px;
+}
+.pccaptionPara {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 18px;
+  color: #262626;
+  margin-top: 3px;
+  margin-left: 24px;
+  height: 15px;
+  width: 379px;
+}
+.pcComCont1 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 24px;
+}
+.pcComPara1 {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  color: #262626;
+}
+.pcComPara2 {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  color: #262626;
+  margin-left: 5px;
+}
+.pcCreatedPara {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  color: #262626;
+  margin-top: 8px;
+  margin-left: 24px;
+  height: 18px;
+  width: 90px;
+}

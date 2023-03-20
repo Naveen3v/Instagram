@@ -1,0 +1,96 @@
+.navCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 64px;
+  width: 1440px;
+  border: 3px solid #fafafa;
+}
+.nav1 {
+  display: flex;
+  flex-direction: row;
+}
+.navImg {
+  height: 21px;
+  width: 59px;
+  margin-top: 25px;
+  margin-left: 200px;
+}
+.navHeading {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 20px;
+  color: #262626;
+  height: 24px;
+  width: 102px;
+  margin-top: 20px;
+  margin-left: 22px;
+}
+
+.nav2 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 408px;
+  width: 520px;
+}
+.navInput {
+  display: flex;
+  flex-direction: row;
+
+  height: 30px;
+  width: 128px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  border-radius: 3px;
+  border: 2px solid #dbdbdb;
+}
+.navSearch {
+  height: 16px;
+  width: 114px;
+  margin-top: 6px;
+  margin-left: 6px;
+  border: 0px;
+}
+.searchIcon {
+  width: 58px;
+  height: 30px;
+  background-color: #dbdbdb;
+  margin-bottom: 5px;
+}
+.searchBtn {
+  background-color: transparent;
+  border: 0px;
+  height: 35px;
+  width: 45px;
+}
+
+.nav2Btn {
+  height: 32px;
+  width: 86px;
+  background-color: #4094ef;
+  border: 0px;
+  border-radius: 4px;
+  color: white;
+  margin-left: 32px;
+  margin-top: 16px;
+}
+.navLink {
+  text-decoration: none;
+}
+
+.navContList {
+  display: flex;
+  flex-direction: row;
+  margin-top: 23px;
+  margin-left: 33px;
+}
+.nav2List {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  color: #262626;
+  height: 18px;
+  width: 38px;
+  margin-left: 23px;
+  list-style-type: none;
+}

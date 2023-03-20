@@ -1,0 +1,17 @@
+.mpCont {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-size: cover;
+  background-color: #fafafa;
+  width: 1440px;
+}
+.mpMainCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 20px;
+}

@@ -1,0 +1,46 @@
+.nfCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+}
+.nfImg {
+  height: 297px;
+  width: 270px;
+  margin-top: 235px;
+}
+.nfHeading {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 32px;
+  color: #262626;
+  text-align: center;
+
+  margin-left: 605px;
+  margin-right: 605px;
+  margin-top: 20px;
+}
+.nfPara {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 20px;
+  color: #989898;
+  text-align: center;
+
+  margin-left: 470px;
+  margin-right: 470px;
+  margin-top: 10px;
+}
+
+.nfBtn {
+  height: 48px;
+  width: 150px;
+  background-color: #4094ef;
+  border: 0px;
+  border-radius: 12px;
+  color: white;
+  margin-left: 650px;
+  margin-right: 650px;
+  margin-top: 10px;
+}
