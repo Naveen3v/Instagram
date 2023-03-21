@@ -4,10 +4,19 @@ import {FaSearch} from 'react-icons/fa'
 import './index.css'
 
 const Header = props => {
+  const {searchChange, searchClick} = props
   const onLogout = () => {
     Cookies.remove('jwt_token')
     const {history} = props
     history.replace('/login')
+  }
+
+  const changeSearchInput = event => {
+    searchChange(event.target.value)
+  }
+
+  const clickSearch = () => {
+    searchClick()
   }
 
   return (
@@ -28,8 +37,14 @@ const Header = props => {
             type="search"
             placeholder="Search Caption"
             className="navSearch"
+            onChange={changeSearchInput}
           />
-          <button type="button" data-testid="searchIcon" className="searchBtn">
+          <button
+            type="button"
+            data-testid="searchIcon"
+            className="searchBtn"
+            onClick={clickSearch}
+          >
             <FaSearch className="searchIcon" />
           </button>
         </div>

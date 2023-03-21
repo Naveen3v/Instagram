@@ -5,6 +5,7 @@ import Loader from 'react-loader-spinner'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import Header from '../Header'
 import PostCard from '../PostCard'
+import ReactSlick from '../ReactSlick'
 import './index.css'
 
 const apiStatusConstants = {
@@ -15,16 +16,29 @@ const apiStatusConstants = {
 }
 
 class Home extends Component {
-  state = {apiStatus: apiStatusConstants.initial, postsList: []}
+  state = {
+    apiStatus: apiStatusConstants.initial,
+    postsList: [],
+    searchInput: '',
+  }
 
   componentDidMount() {
     this.getPosts()
   }
 
+  searchChange = value => {
+    this.setState({searchInput: value})
+  }
+
+  searchClick = () => {
+    this.getPosts()
+  }
+
   getPosts = async () => {
+    const {searchInput} = this.state
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
-    const url = 'https://apis.ccbp.in/insta-share/posts'
+    const url = `https://apis.ccbp.in/insta-share/posts?search=${searchInput}`
     const options = {
       method: 'GET',
       headers: {
@@ -102,7 +116,11 @@ class Home extends Component {
     const {apiStatus} = this.state
     return (
       <div className="homeCont">
-        <Header />
+        <Header
+          searchChange={this.searchChange}
+          searchClick={this.searchClick}
+        />
+        <ReactSlick />
         <div className="postCont">{this.displayPosts()}</div>
       </div>
     )

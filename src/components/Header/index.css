@@ -36,10 +36,9 @@
 .navInput {
   display: flex;
   flex-direction: row;
-
   height: 30px;
   width: 128px;
-  margin-top: 20px;
+  margin-top: 18px;
   margin-bottom: 16px;
   border-radius: 3px;
   border: 2px solid #dbdbdb;
@@ -52,16 +51,17 @@
   border: 0px;
 }
 .searchIcon {
-  width: 58px;
-  height: 30px;
-  background-color: #dbdbdb;
-  margin-bottom: 5px;
+  width: 10px;
+  height: 10px;
+  margin-top: 3px;
 }
 .searchBtn {
-  background-color: transparent;
+  background-color: #dbdbdb;
   border: 0px;
-  height: 35px;
-  width: 45px;
+  height: 29px;
+  width: 34px;
+  border: 2px solid #dbdbdb;
+  margin-left: 6px;
 }
 
 .nav2Btn {

@@ -1,0 +1,39 @@
+.sliderCont {
+  display: flex;
+  flex-direction: row;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 90px;
+}
+.storSliCont {
+  display: flex;
+  flex-direction: row;
+}
+.stoListCont {
+  display: flex;
+  flex-direction: row;
+}
+.stoList {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+.stoImg {
+  height: 70px;
+  width: 70px;
+  border-radius: 100px;
+  margin-left: 67px;
+}
+.stoPara {
+  height: 24px;
+  width: 80px;
+  margin-top: 4px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400px;
+  margin-left: 70px;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
