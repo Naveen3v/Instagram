@@ -17,11 +17,11 @@ const UserProfileCard = props => {
   return (
     <div className="upcCont">
       <div className="upcProfileCont">
-        <img src={profilePic} alt="pic" className="upcProfilePic" />
+        <img src={profilePic} alt="user profile" className="upcProfilePic" />
         <div className="upcProfileTextCont">
-          <p className="upcProfilePara">{userName}</p>
+          <h1 className="upcProfilePara">{userName}</h1>
           <div className="upcpff">
-            <p className="upcpffPara">{postsCount} posts</p>
+            <h1 className="upcpffPara">{postsCount} posts</h1>
             <p className="upcpffPara">{followersCount} followers</p>
             <p className="upcpffPara">{followingCount} following</p>
           </div>
@@ -29,11 +29,13 @@ const UserProfileCard = props => {
           <p className="upcBioPara">{userBio}</p>
         </div>
       </div>
-      <div className="upcStorCont">
-        <img src={stories[0].image} alt="stories" className="upcStorImg" />
-        <img src={stories[1].image} alt="stories" className="upcStorImg" />
-        <img src={stories[2].image} alt="stories" className="upcStorImg" />
-      </div>
+      <ul className="upcStorCont">
+        {stories.map(each => (
+          <li className="upcList" key={each.id}>
+            <img src={each.image} alt="user story" className="upcStorImg" />
+          </li>
+        ))}
+      </ul>
       <hr className="upcLine" />
       <div className="upcgridCont">
         <BsGrid3X3 className="upcgrid" />
@@ -42,7 +44,7 @@ const UserProfileCard = props => {
       <ul className="upcListCont">
         {posts.map(each => (
           <li className="upcList" key={each.id}>
-            <img src={each.image} className="upcListImg" alt="post" />
+            <img src={each.image} className="upcListImg" alt="user post" />
           </li>
         ))}
       </ul>

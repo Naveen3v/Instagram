@@ -28,3 +28,57 @@
   margin-left: 499px;
   margin-top: 345px;
 }
+.srHeading {
+  height: 32px;
+  width: 200px;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500px;
+  margin-left: 200px;
+}
+.homeDisplay {
+  display: flex;
+  flex-direction: column;
+}
+.homeSearchResultsHeading {
+  height: 32px;
+  width: 200px;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500px;
+  margin-right: 1000px;
+  margin-left: 200px;
+}
+.homeSearchEmpty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 20px;
+}
+.homeSearchImg {
+  height: 409px;
+  width: 500px;
+
+  margin-top: 20px;
+}
+.homeSearchHeading {
+  height: 48px;
+  width: 456px;
+  font-family: 'Roboto';
+  font-size: 32px;
+  font-weight: 500px;
+  margin-left: 200px;
+  margin-top: 20px;
+}
+.homeSearchPara {
+  height: 32px;
+  width: 329px;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 400px;
+  margin-left: 20px;
+  margin-top: 5px;
+}

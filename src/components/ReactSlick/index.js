@@ -66,7 +66,7 @@ class ReactSlick extends Component {
           <ul className="stoListCont">
             {storiesList.map(each => (
               <li className="stoList" key={each.userId}>
-                <img src={each.storyUrl} alt="stroy" className="stoImg" />
+                <img src={each.storyUrl} alt="user story" className="stoImg" />
                 <p className="stoPara">{each.userName}</p>
               </li>
             ))}

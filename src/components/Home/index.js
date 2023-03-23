@@ -20,6 +20,7 @@ class Home extends Component {
     apiStatus: apiStatusConstants.initial,
     postsList: [],
     searchInput: '',
+    show: true,
   }
 
   componentDidMount() {
@@ -31,7 +32,7 @@ class Home extends Component {
   }
 
   searchClick = () => {
-    this.getPosts()
+    this.setState({show: false}, this.getPosts)
   }
 
   getPosts = async () => {
@@ -67,8 +68,7 @@ class Home extends Component {
         postsList: updatedData,
         apiStatus: apiStatusConstants.success,
       })
-    }
-    if (response.status === 401) {
+    } else if (response.status === 401) {
       this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
@@ -92,7 +92,11 @@ class Home extends Component {
 
   postFailure = () => (
     <>
-      <FiAlertTriangle className="fiAlert" />
+      <img
+        src="https://res.cloudinary.com/dsqq0xr88/image/upload/v1679535809/alert-triangle_gkgajs.png"
+        alt="failure view"
+        className="alertTri"
+      />
       <p>Something went wrong.Please try again</p>
       <button>Try again</button>
     </>
@@ -113,15 +117,39 @@ class Home extends Component {
   }
 
   render() {
-    const {apiStatus} = this.state
+    const {apiStatus, searchInput, show, postsList} = this.state
+    const searchNotFound = postsList.length === 0
+
     return (
       <div className="homeCont">
         <Header
           searchChange={this.searchChange}
           searchClick={this.searchClick}
         />
-        <ReactSlick />
-        <div className="postCont">{this.displayPosts()}</div>
+        {searchNotFound && (
+          <div className="homeSearchEmpty">
+            <img
+              src="https://res.cloudinary.com/dsqq0xr88/image/upload/v1679534725/Search_Not_Found_gydjjg.png"
+              alt="search not found"
+              className="homeSearchImg"
+            />
+            <h1 className="homeSearchHeading">Search Not Found</h1>
+            <p className="homeSearchPara">
+              Try different keyword or search again
+            </p>
+          </div>
+        )}
+        {show ? (
+          <div className="homeDisplay">
+            <ReactSlick />
+            <div className="postCont">{this.displayPosts()}</div>
+          </div>
+        ) : (
+          <div className="homeDisplay">
+            <h1 className="homeSearchResultsHeading">Search Results</h1>
+            <div className="postCont">{this.displayPosts()}</div>
+          </div>
+        )}
       </div>
     )
   }

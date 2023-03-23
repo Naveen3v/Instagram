@@ -53,13 +53,12 @@
   height: 20px;
   width: 24px;
   margin-top: 2px;
-  color: #f05161;
+  color: black;
 }
 .pcLink {
   text-decoration: none;
 }
 .pcHeartBtn {
-  color: #f05161;
   border: 0px;
   background-color: transparent;
 }

@@ -56,6 +56,10 @@ class MyProfile extends Component {
         apiStatus: apiStatusConstants.success,
         myProfileData: updatedData,
       })
+    } else if (response.status === 401) {
+      this.setState({
+        apiStatus: apiStatusConstants.failure,
+      })
     }
   }
 
@@ -74,6 +78,20 @@ class MyProfile extends Component {
       />
     )
   }
+
+  mpFailure = () => (
+    <div className="mpFailCont">
+      <img
+        src="https://res.cloudinary.com/dsqq0xr88/image/upload/v1679494951/Failure_MP_li2utx.png"
+        className="mpFailImg"
+        alt="failure view"
+      />
+      <p className="mpFailPara">Something went wrong. Please try again</p>
+      <button type="button" className="mpFailBtn">
+        Try again
+      </button>
+    </div>
+  )
 
   displayMyProfile = () => {
     const {apiStatus} = this.state

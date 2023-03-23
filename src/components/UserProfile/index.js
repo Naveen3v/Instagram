@@ -78,7 +78,23 @@ class UserProfile extends Component {
     )
   }
 
-  upFailure = () => {}
+  clickBtn = () => {
+    this.getUserProfileData()
+  }
+
+  upFailure = () => (
+    <div className="upFailCont">
+      <img
+        src="https://res.cloudinary.com/dsqq0xr88/image/upload/v1679494951/Failure_MP_li2utx.png"
+        className="upFailImg"
+        alt="failure view"
+      />
+      <p className="upFailPara">Something went wrong. Please try again</p>
+      <button type="button" className="upFailBtn" onClick={this.clickBtn}>
+        Try again
+      </button>
+    </div>
+  )
 
   displayUserProfile = () => {
     const {apiStatus} = this.state

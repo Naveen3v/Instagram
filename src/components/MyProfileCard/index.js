@@ -17,9 +17,9 @@ const MyProfileCard = props => {
   return (
     <div className="mpcCont">
       <div className="mpcProfileCont">
-        <img src={profilePic} alt="pic" className="mpcProfilePic" />
+        <img src={profilePic} alt="my profile" className="mpcProfilePic" />
         <div className="mpcProfileTextCont">
-          <p className="mpcProfilePara">{userName}</p>
+          <h1 className="mpcProfilePara">{userName}</h1>
           <div className="mpcpff">
             <p className="mpcpffPara">{postsCount} posts</p>
             <p className="mpcpffPara">{followersCount} followers</p>
@@ -29,20 +29,22 @@ const MyProfileCard = props => {
           <p className="mpcBioPara">{userBio}</p>
         </div>
       </div>
-      <div className="mpcStorCont">
-        <img src={stories[0].image} alt="stories" className="mpcStorImg" />
-        <img src={stories[1].image} alt="stories" className="mpcStorImg" />
-        <img src={stories[2].image} alt="stories" className="mpcStorImg" />
-      </div>
+      <ul className="mpcStorCont">
+        {stories.map(each => (
+          <li className="mpcList" key={each.id}>
+            <img src={each.image} alt="my story" className="mpcStorImg" />
+          </li>
+        ))}
+      </ul>
       <hr className="mpcLine" />
       <div className="mpcgridCont">
         <BsGrid3X3 className="mpcgrid" />
-        <p className="mpcPostsPara">Posts</p>
+        <h1 className="mpcPostsPara">Posts</h1>
       </div>
       <ul className="mpcListCont">
         {posts.map(each => (
           <li className="mpcList" key={each.id}>
-            <img src={each.image} className="mpcListImg" alt="post" />
+            <img src={each.image} className="mpcListImg" alt="my post" />
           </li>
         ))}
       </ul>
