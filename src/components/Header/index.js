@@ -45,7 +45,7 @@ const Header = props => {
             className="searchBtn"
             onClick={clickSearch}
           >
-            <FaSearch className="searchIcon" />
+            <FaSearch className="searchIcon" testid="searchIcon" />
           </button>
         </div>
         <ul className="navContList">

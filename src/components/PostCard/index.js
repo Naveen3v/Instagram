@@ -9,15 +9,15 @@ import {BiShareAlt} from 'react-icons/bi'
 import './index.css'
 
 class PostCard extends Component {
-  state = {likeStatus: false}
+  state = {likeStatus: true}
 
   changeLikeIcon = async () => {
     const {postDetails} = this.props
-    const {postId} = postDetails
+    const {postId, likesCount} = postDetails
     const {likeStatus} = this.state
     const jwtToken = Cookies.get('jwt_token')
-    const Body = {
-      likeStatus,
+    const status = {
+      like_status: likeStatus,
     }
     const url = `https://apis.ccbp.in/insta-share/posts/${postId}/like`
     const options = {
@@ -25,11 +25,12 @@ class PostCard extends Component {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
-      body: JSON.stringify(Body),
+      body: JSON.stringify(status),
     }
     const response = await fetch(url, options)
     const data = await response.json()
     console.log(data)
+
     this.setState(prevState => ({likeStatus: !prevState.likeStatus}))
   }
 
@@ -47,6 +48,7 @@ class PostCard extends Component {
       comments,
     } = postDetails
     const {likeStatus} = this.state
+
     return (
       <li className="pcList">
         <div className="pcprofilepicCont">
@@ -56,20 +58,20 @@ class PostCard extends Component {
             className="pcprofilepicImg"
           />
           <Link to={`/users/${userId}`} className="pcLink">
-            <li className="pcUsername">{userName}</li>
+            <p className="pcUsername">{userName}</p>
           </Link>
         </div>
         <img src={imageUrl} alt="post" className="pcuserImage" />
         <div className="pcbottomCont">
           <div className="pcIconCont">
-            {!likeStatus ? (
+            {likeStatus ? (
               <button
                 type="button"
                 data-testid="likeIcon"
                 className="pcHeartBtn"
                 onClick={this.changeLikeIcon}
               >
-                <BsHeart className="pcbsHeart" />
+                <FcLike className="pcbsHeart" testid="likeIcon" />
               </button>
             ) : (
               <button
@@ -78,7 +80,7 @@ class PostCard extends Component {
                 className="pcHeartBtn"
                 onClick={this.changeLikeIcon}
               >
-                <FcLike className="pcbsHeart" />
+                <BsHeart className="pcbsHeart" testid="unLikeIcon" />
               </button>
             )}
             <FaRegComment className="pcrcomment" />

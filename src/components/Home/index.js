@@ -35,6 +35,10 @@ class Home extends Component {
     this.setState({show: false}, this.getPosts)
   }
 
+  tryAgain = () => {
+    this.getPosts()
+  }
+
   getPosts = async () => {
     const {searchInput} = this.state
     this.setState({apiStatus: apiStatusConstants.inProgress})
@@ -47,6 +51,7 @@ class Home extends Component {
       },
     }
     const response = await fetch(url, options)
+    console.log(response)
     if (response.ok === true) {
       const data = await response.json()
       const updatedData = data.posts.map(each => ({
@@ -68,7 +73,7 @@ class Home extends Component {
         postsList: updatedData,
         apiStatus: apiStatusConstants.success,
       })
-    } else if (response.status === 401) {
+    } else {
       this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
@@ -91,15 +96,17 @@ class Home extends Component {
   }
 
   postFailure = () => (
-    <>
+    <div className="homeFailureCont">
       <img
         src="https://res.cloudinary.com/dsqq0xr88/image/upload/v1679535809/alert-triangle_gkgajs.png"
         alt="failure view"
         className="alertTri"
       />
-      <p>Something went wrong.Please try again</p>
-      <button>Try again</button>
-    </>
+      <p className="homeFailPara">Something went wrong. Please try again</p>
+      <button type="button" className="homeFailBtn" onClick={this.tryAgain}>
+        Try again
+      </button>
+    </div>
   )
 
   displayPosts = () => {

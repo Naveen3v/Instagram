@@ -56,7 +56,7 @@ class MyProfile extends Component {
         apiStatus: apiStatusConstants.success,
         myProfileData: updatedData,
       })
-    } else if (response.status === 401) {
+    } else {
       this.setState({
         apiStatus: apiStatusConstants.failure,
       })
@@ -79,6 +79,10 @@ class MyProfile extends Component {
     )
   }
 
+  tryAgain = () => {
+    this.getMyProfileData()
+  }
+
   mpFailure = () => (
     <div className="mpFailCont">
       <img
@@ -87,7 +91,7 @@ class MyProfile extends Component {
         alt="failure view"
       />
       <p className="mpFailPara">Something went wrong. Please try again</p>
-      <button type="button" className="mpFailBtn">
+      <button type="button" className="mpFailBtn" onClick={this.tryAgain}>
         Try again
       </button>
     </div>

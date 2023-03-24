@@ -26,6 +26,10 @@ class ReactSlick extends Component {
     this.getStoriesList()
   }
 
+  rstryAgain = () => {
+    this.getStoriesList()
+  }
+
   getStoriesList = async () => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
@@ -48,6 +52,8 @@ class ReactSlick extends Component {
         apiStatus: apiStatusConstants.success,
         storiesList: updatedData,
       })
+    } else {
+      this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 
@@ -75,6 +81,20 @@ class ReactSlick extends Component {
       </div>
     )
   }
+
+  storiesFailure = () => (
+    <div className="rsFailureCont">
+      <img
+        src="https://res.cloudinary.com/dsqq0xr88/image/upload/v1679535809/alert-triangle_gkgajs.png"
+        alt="failure view"
+        className="rsalertTri"
+      />
+      <p className="rsFailPara">Something went wrong. Please try again</p>
+      <button type="button" className="rsFailBtn" onClick={this.rstryAgain}>
+        Try again
+      </button>
+    </div>
+  )
 
   displayStories = () => {
     const {apiStatus} = this.state

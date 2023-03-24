@@ -82,3 +82,39 @@
   margin-left: 20px;
   margin-top: 5px;
 }
+.homeFailureCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 20px;
+}
+
+.alertTri {
+  height: 44px;
+  width: 44ppx;
+
+  margin-top: 20px;
+}
+.homeFailPara {
+  height: 32px;
+  width: 329px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.homeFailBtn {
+  height: 16px;
+  width: 54px;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 400px;
+  margin-left: 200px;
+  margin-top: 5px;
+  background-color: #4094ef;
+  color: white;
+}

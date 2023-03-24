@@ -37,3 +37,39 @@
 .slick-next:before {
   color: black;
 }
+.rsFailureCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 20px;
+}
+
+.rsalertTri {
+  height: 44px;
+  width: 44ppx;
+
+  margin-top: 20px;
+}
+.rsFailPara {
+  height: 32px;
+  width: 329px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.rsFailBtn {
+  height: 16px;
+  width: 54px;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 400px;
+  margin-left: 200px;
+  margin-top: 5px;
+  background-color: #4094ef;
+  color: white;
+}

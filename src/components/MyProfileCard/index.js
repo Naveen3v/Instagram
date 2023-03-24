@@ -1,4 +1,5 @@
 import {BsGrid3X3} from 'react-icons/bs'
+import {BiCamera} from 'react-icons/bi'
 import './index.css'
 
 const MyProfileCard = props => {
@@ -14,6 +15,7 @@ const MyProfileCard = props => {
     posts,
     stories,
   } = myProfileDetails
+
   return (
     <div className="mpcCont">
       <div className="mpcProfileCont">
@@ -41,6 +43,7 @@ const MyProfileCard = props => {
         <BsGrid3X3 className="mpcgrid" />
         <h1 className="mpcPostsPara">Posts</h1>
       </div>
+
       <ul className="mpcListCont">
         {posts.map(each => (
           <li className="mpcList" key={each.id}>

@@ -59,6 +59,8 @@ class UserProfile extends Component {
         apiStatus: apiStatusConstants.success,
         userProfileData: updatedData,
       })
+    } else {
+      this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 
