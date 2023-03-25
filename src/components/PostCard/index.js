@@ -64,7 +64,7 @@ class PostCard extends Component {
       comments,
     } = postDetails
     const {likeStatus, count} = this.state
-    const likesResult = likesCount + count
+    const likesResult = count
 
     return (
       <li className="pcList">
@@ -103,7 +103,11 @@ class PostCard extends Component {
             <FaRegComment className="pcrcomment" />
             <BiShareAlt className="pcrshare" />
           </div>
-          <p className="pclikePara">{likesCount} likes</p>
+          {likeStatus ? (
+            <p className="pclikePara">{likesCount} likes</p>
+          ) : (
+            <p className="pclikePara">{likesResult} likes</p>
+          )}
           <p className="pccaptionPara">{caption}</p>
           <div className="pcComCont1">
             <span className="pcComPara1">{comments[0].userName}</span>
