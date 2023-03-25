@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
+import {BiCamera} from 'react-icons/bi'
 import Loader from 'react-loader-spinner'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import Header from '../Header'
@@ -72,6 +73,7 @@ class UserProfile extends Component {
 
   upSuccess = () => {
     const {userProfileData} = this.state
+
     return (
       <UserProfileCard
         userProfileDetails={userProfileData}

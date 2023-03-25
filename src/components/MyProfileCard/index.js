@@ -43,14 +43,20 @@ const MyProfileCard = props => {
         <BsGrid3X3 className="mpcgrid" />
         <h1 className="mpcPostsPara">Posts</h1>
       </div>
-
-      <ul className="mpcListCont">
-        {posts.map(each => (
-          <li className="mpcList" key={each.id}>
-            <img src={each.image} className="mpcListImg" alt="my post" />
-          </li>
-        ))}
-      </ul>
+      {posts.length === 0 ? (
+        <>
+          <BiCamera className="mpcNoIcon" />
+          <h1 className="mpcNoHeading">No Posts</h1>
+        </>
+      ) : (
+        <ul className="mpcListCont">
+          {posts.map(each => (
+            <li className="mpcList" key={each.id}>
+              <img src={each.image} className="mpcListImg" alt="my post" />
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }

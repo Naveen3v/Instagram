@@ -1,4 +1,5 @@
 import {BsGrid3X3} from 'react-icons/bs'
+import {BiCamera} from 'react-icons/bi'
 import './index.css'
 
 const UserProfileCard = props => {
@@ -41,13 +42,20 @@ const UserProfileCard = props => {
         <BsGrid3X3 className="upcgrid" />
         <p className="upcPostsPara">Posts</p>
       </div>
-      <ul className="upcListCont">
-        {posts.map(each => (
-          <li className="upcList" key={each.id}>
-            <img src={each.image} className="upcListImg" alt="user post" />
-          </li>
-        ))}
-      </ul>
+      {posts.length === 0 ? (
+        <>
+          <BiCamera className="upcNoIcon" />
+          <h1 className="upcNoHeading">No Posts</h1>
+        </>
+      ) : (
+        <ul className="upcListCont">
+          {posts.map(each => (
+            <li className="upcList" key={each.id}>
+              <img src={each.image} className="upcListImg" alt="user post" />
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }

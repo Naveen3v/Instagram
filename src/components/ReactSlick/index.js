@@ -14,9 +14,14 @@ const apiStatusConstants = {
 }
 
 const settings = {
-  dots: true,
-  slidesToShow: 1,
+  dots: false,
+  infinite: true,
+  slidesToShow: 6,
   slidesToScroll: 1,
+  autoplay: true,
+  speed: 2000,
+  autoplaySpeed: 2000,
+  cssEase: 'linear',
 }
 
 class ReactSlick extends Component {
@@ -65,20 +70,20 @@ class ReactSlick extends Component {
 
   storiesSuccess = () => {
     const {storiesList} = this.state
-    const {userName, storyUrl, userId} = storiesList
     return (
-      <div className="storSliCont">
-        <Slider {...settings}>
-          <ul className="stoListCont">
-            {storiesList.map(each => (
-              <li className="stoList" key={each.userId}>
-                <img src={each.storyUrl} alt="user story" className="stoImg" />
-                <p className="stoPara">{each.userName}</p>
+      <Slider {...settings}>
+        {storiesList.map(each => {
+          const {userId, storyUrl, userName} = each
+          return (
+            <ul className="stoListCont" key={userId}>
+              <li className="stoList">
+                <img src={storyUrl} alt="user story" className="stoImg" />
+                <p className="stoPara">{userName}</p>
               </li>
-            ))}
-          </ul>
-        </Slider>
-      </div>
+            </ul>
+          )
+        })}
+      </Slider>
     )
   }
 
@@ -111,7 +116,11 @@ class ReactSlick extends Component {
   }
 
   render() {
-    return <div className="sliderCont">{this.displayStories()}</div>
+    return (
+      <div className="slickMain">
+        <div className="sliderCont">{this.displayStories()}</div>
+      </div>
+    )
   }
 }
 export default ReactSlick

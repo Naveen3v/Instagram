@@ -51,3 +51,26 @@
   border: 0px;
   border-radius: 12px;
 }
+.mpNo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mpNoIcon {
+  height: 86px;
+  width: 86px;
+  color: #262626;
+  margin-left: 677px;
+  border-radius: 100px;
+}
+.mpNoHeading {
+  height: 48px;
+  width: 182px;
+  margin-left: 629px;
+  margin-top: 20px;
+  font-family: 'Roboto';
+  font-size: 32px;
+  font-weight: 300px;
+  color: #262626;
+}

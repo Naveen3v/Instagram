@@ -9,7 +9,7 @@ import {BiShareAlt} from 'react-icons/bi'
 import './index.css'
 
 class PostCard extends Component {
-  state = {likeStatus: true}
+  state = {likeStatus: true, count: 0}
 
   changeLikeIcon = async () => {
     const {postDetails} = this.props
@@ -34,6 +34,22 @@ class PostCard extends Component {
     this.setState(prevState => ({likeStatus: !prevState.likeStatus}))
   }
 
+  likeIncrement = () => {
+    const {postDetails} = this.props
+    const {likesCount} = postDetails
+    const {count} = this.state
+    this.changeLikeIcon()
+    this.setState({count: likesCount + 1})
+  }
+
+  likeDecrement = () => {
+    const {postDetails} = this.props
+    const {likesCount} = postDetails
+    const {count} = this.state
+    this.changeLikeIcon()
+    this.setState({count: likesCount - 1})
+  }
+
   render() {
     const {postDetails} = this.props
     const {
@@ -47,7 +63,8 @@ class PostCard extends Component {
       createdAt,
       comments,
     } = postDetails
-    const {likeStatus} = this.state
+    const {likeStatus, count} = this.state
+    const likesResult = likesCount + count
 
     return (
       <li className="pcList">
@@ -69,7 +86,7 @@ class PostCard extends Component {
                 type="button"
                 data-testid="likeIcon"
                 className="pcHeartBtn"
-                onClick={this.changeLikeIcon}
+                onClick={this.likeIncrement}
               >
                 <FcLike className="pcbsHeart" testid="likeIcon" />
               </button>
@@ -78,7 +95,7 @@ class PostCard extends Component {
                 type="button"
                 data-testid="unLikeIcon"
                 className="pcHeartBtn"
-                onClick={this.changeLikeIcon}
+                onClick={this.likeDecrement}
               >
                 <BsHeart className="pcbsHeart" testid="unLikeIcon" />
               </button>
@@ -89,11 +106,11 @@ class PostCard extends Component {
           <p className="pclikePara">{likesCount} likes</p>
           <p className="pccaptionPara">{caption}</p>
           <div className="pcComCont1">
-            <p className="pcComPara1">{comments[0].userName}</p>
+            <span className="pcComPara1">{comments[0].userName}</span>
             <p className="pcComPara2">{comments[0].comment}</p>
           </div>
           <div className="pcComCont1">
-            <p className="pcComPara1">{comments[1].userName}</p>
+            <span className="pcComPara1">{comments[1].userName}</span>
             <p className="pcComPara2">{comments[1].comment}</p>
           </div>
           <p className="pcCreatedPara">{createdAt}</p>
